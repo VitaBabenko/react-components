@@ -2,8 +2,12 @@ import styled from 'styled-components';
 
 export const Section = styled.section`
     display: block;
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
     width: 450px;
     text-align: center;
+    border: 1px solid #EEEEEE;
 `;
 
 export const Title = styled.h2`
@@ -21,5 +25,16 @@ export const List = styled.ul`
 export const ListItem = styled.li`
     width: 90px;
     height: 90px;
-    padding: 15px;
-`
+    padding: 20px 15px;
+    border: 1px solid #EEEEEE;
+    text-align: center;
+`;
+
+export const InfoItem = styled.span`
+    margin-bottom: 10px;
+`;
+
+export const DataItem = styled.span`
+    font-size: 20px;
+`;
+

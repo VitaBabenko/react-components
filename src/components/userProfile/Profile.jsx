@@ -1,33 +1,33 @@
 import PropTypes from "prop-types";
+import { Container, User, ImageUser, NameUser, InfoUser, List, ListItem, InfoItem, DataItem } from './Profile.styled';
 
 export const Profile = ({ username, tag, location, avatar, stats } ) => {
-    return <div>
-        <div>
-            <img
+    return <Container>
+        <User>
+            <ImageUser
                 src={avatar}
                 alt={username}
-                width="240"
             />
-            <p>{username}</p>
-            <p>{tag}</p>
-            <p>{location}</p>
-        </div>
+            <NameUser>{username}</NameUser>
+            <InfoUser>@{tag}</InfoUser>
+            <InfoUser>{location}</InfoUser>
+        </User>
 
-        <ul>
-            <li>
-                <span>Followers</span>
-                <span>{stats.followers}</span>
-            </li>
-            <li>
-                <span>Views</span>
-                <span>{stats.views}</span>
-            </li>
-            <li>
-                <span>Likes</span>
-                <span>{stats.likes}</span>
-            </li>
-        </ul>
-    </div>
+        <List>
+            <ListItem>
+                <InfoItem>Followers</InfoItem><br />
+                <DataItem>{stats.followers}</DataItem>
+            </ListItem>
+            <ListItem>
+                <InfoItem>Views</InfoItem><br />
+                <DataItem>{stats.views}</DataItem>
+            </ListItem>
+            <ListItem>
+                <InfoItem>Likes</InfoItem><br />
+                <DataItem>{stats.likes}</DataItem>
+            </ListItem>
+        </List>
+    </Container>
 };
 
 Profile.propTypes = {
@@ -41,41 +41,3 @@ Profile.propTypes = {
         likes: PropTypes.number.isRequired,
     }).isRequired
 }
-
-
-
-
-
-
-
-
-
-
-
-// {/* <div class="profile">
-//   <div class="description">
-//     <img
-//       src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png"
-//       alt="User avatar"
-//       class="avatar"
-//     />
-//     <p class="name">Petra Marica</p>
-//     <p class="tag">@pmarica</p>
-//     <p class="location">Salvador, Brasil</p>
-//   </div>
-
-//   <ul class="stats">
-//     <li>
-//       <span class="label">Followers</span>
-//       <span class="quantity">1000</span>
-//     </li>
-//     <li>
-//       <span class="label">Views</span>
-//       <span class="quantity">2000</span>
-//     </li>
-//     <li>
-//       <span class="label">Likes</span>
-//       <span class="quantity">3000</span>
-//     </li>
-//   </ul>
-// </div> */}

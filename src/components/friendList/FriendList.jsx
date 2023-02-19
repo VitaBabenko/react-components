@@ -17,8 +17,3 @@ FriendList.propTypes = {
         id: PropTypes.number.isRequired
     })).isRequired
 }
-
-
-/* <ul class="friend-list">
-  <!-- Произвольное кол-во FriendListItem -->
-</ul> */
