@@ -20,4 +20,10 @@ export const ItemTable = styled.td`
     border: 1px solid #EEEEEE;
     color: grey;
     text-align: center;
+`;
+
+export const TableLine = styled.tr`
+    background-color: ${props => {
+    console.log(props.index)
+    }};
 `

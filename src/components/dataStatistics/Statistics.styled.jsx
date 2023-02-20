@@ -28,13 +28,16 @@ export const ListItem = styled.li`
     padding: 20px 15px;
     border: 1px solid #EEEEEE;
     text-align: center;
+    background-color: ${props => props.bgcColor}
 `;
 
 export const InfoItem = styled.span`
     margin-bottom: 10px;
+    color: white; 
 `;
 
 export const DataItem = styled.span`
     font-size: 20px;
+    color: white;
 `;
 

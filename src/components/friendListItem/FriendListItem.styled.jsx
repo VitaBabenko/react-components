@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 export const ListItem = styled.div`
     display: flex;
-    gap: 30px;
+    gap: 20px;
+    align-items: baseline;
     width: 300px;
     margin-left: auto;
     margin-right: auto;
@@ -13,10 +14,19 @@ export const ListItem = styled.div`
 `;
 
 export const Image = styled.img`
-    width: 50px;
+    width: 60px;
 `;
 
 export const FriendName = styled.p`
     font-size: 18px;
     font-weight: 600;
+`;
+
+export const Status = styled.span`
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: ${props => {
+    return props.isTrue ? "green" : "red";
+    }};
 `
