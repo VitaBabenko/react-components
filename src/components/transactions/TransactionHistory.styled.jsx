@@ -24,6 +24,6 @@ export const ItemTable = styled.td`
 
 export const TableLine = styled.tr`
     background-color: ${props => {
-    console.log(props.index)
+    return props.color;
     }};
 `

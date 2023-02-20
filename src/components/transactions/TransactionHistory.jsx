@@ -12,9 +12,9 @@ export const TransactionHistory = ({ items }) => {
         </thead>
 
         <tbody>
-            {items.map(({ id, type, amount, currency }, i) => {
+            {items.map(({ id, type, amount, currency }, index) => {
                 return (
-                    <TableLine key={id} index={i}>
+                    <TableLine key={id} color={index % 2 ? '#EEEEEE' : 'white'}>
                         <ItemTable>{type}</ItemTable>
                         <ItemTable>{amount}</ItemTable>
                         <ItemTable>{currency}</ItemTable>
